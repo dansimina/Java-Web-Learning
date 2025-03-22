@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:fragment="head">
     <meta charset="UTF-8" />
-    <title>Coding Events</title>
+    <title th:text="${title}"></title>
 
     <!-- as long as files are in the static folder th:source="@{}" or th:ref... thymeleaf will be able to dynamically find these based on their location -->
     <!-- script th:src="@{/script.js}"></script -->
@@ -18,8 +18,12 @@
 <nav th:fragment="navigation">
     <ul class="nav">
         <li class="nav-item"><a class="nav-link" href="/events">All Events</a></li>
-        <li class="nav-item"><a class="nav-link" href="/events/create">Create Event</a></li>
-        <li class="nav-item"><a class="nav-link" href="/events/delete">Delete Event</a></li>
+        <li class="nav-item"><a class="nav-link" href="/events/create">Create Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="/events/delete">Delete Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="/eventCategories">All Event Categories</a></li>
+        <li class="nav-item"><a class="nav-link" href="/eventCategories/create">Create Event Category</a></li>
+        <li class="nav-item"><a class="nav-link" href="/tags">All Tags</a></li>
+        <li class="nav-item"><a class="nav-link" href="/tags/create">Create Tag</a></li>
     </ul>
 </nav>
 
