@@ -15,20 +15,11 @@
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Contact Email</th>
-            <th>Category</th>
+            <th>Event Name</th>
         </tr>
     </thead>
-    <tr th:block th:each="event : ${events}">
-        <td th:text="${event.id}"></td>
-        <td th:text="${event.name}"></td>
-        <td th:text="${event.description}"></td>
-        <td th:text="${event.contactEmail}"></td>
-        <td th:text="${event.category.name}"></td>
-        <!-- event.name = event.getName() syntax sugar -->
+    <tr th:each="event : ${events}">
+        <td><a th:href="'/events/detail?eventId=' + ${event.id}" th:text="${event.name}"></a></td>
     </tr>
 </table>
 

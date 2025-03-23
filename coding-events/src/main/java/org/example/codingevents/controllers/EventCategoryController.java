@@ -10,7 +10,7 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-@RequestMapping({"eventCategories"})
+@RequestMapping({"eventCategories", "eventCategories/"})
 public class EventCategoryController {
 
     @Autowired
